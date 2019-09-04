@@ -1,6 +1,5 @@
 //Dice Rolling Emulator
 #include <iostream>
-#include <sstream>
 #include <ctime>
 #include <cstdlib>
 
