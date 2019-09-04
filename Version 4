@@ -7,6 +7,10 @@
 using namespace std;
 int main()
 {
+int userChoice = 0;
+do
+{
+
 //Dice Type
 int type = 0;
 cout << "Please select the dice type." << endl;
@@ -30,34 +34,9 @@ y++;
 cout << "You rolled a " << subtotal << endl;
 }
 cout << "To a total of " << total << endl;
-
-//Reroll Loop
-int userChoice = 0;
 cout << "Would you like to roll again?" << endl;
 cout << "1 = Yes" << " " <<"0 = No" << endl;
 cin >> userChoice;
-while(userChoice == 1)
-{
-int type = 0;
-cout << "Please select the dice type." << endl;
-cin >> type;
-int num = 0;
-cout << "Please select number of dice." << endl;
-cin >> num;
-int total = 0;
-int subtotal = 0;
-int y = 0;
-srand(time(0));
-while(y != num)
-{
-subtotal = rand()%type+1;
-total += subtotal;
-y++;
-cout << "You rolled a " << subtotal << endl;
 }
-cout << "To a total of " << total << endl;
-cout << "Would you like to roll again?" << endl;
-cout << "1 = Yes" << " " <<"0 = No" << endl;
-cin >> userChoice;
-};
+while (userChoice == 1);
 }
